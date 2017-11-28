@@ -13,11 +13,18 @@ module.exports = {
   extends: 'standard',
   // required to lint *.vue files
   plugins: [
-    'html'
+    'html',
+    'vue'
   ],
   // add your custom rules here
   'rules': {
-    'indent': [2, 4],//缩进风格
+    'comma-spacing': [2, {'before': false, 'after': true}], // 逗号后带空格
+    'indent': [2, 4], //缩进风格
+    'linebreak-style': [2, 'windows'],  // 换行风格
+    'quotes': [2, 'single'],  // 引号，单引号
+    'semi': [2, 'always'],  // 始终分号结尾
+    'no-extra-semi': 2, // 禁止不必要的分号
+
     // allow paren-less arrow functions
     'arrow-parens': 0,
     // allow async-await
