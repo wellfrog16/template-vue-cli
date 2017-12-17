@@ -1,4 +1,4 @@
-# my-project
+# template-vue-cli
 
 > A Vue.js project
 
