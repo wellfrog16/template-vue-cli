@@ -12,18 +12,13 @@ export default {
 </script>
 
 <style lang="less">
-#app {
-    font-family: 'Avenir', Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-align: center;
-    color: #2c3e50;
-    margin-top: 60px;
+html, body {
+    padding: 0;
+    margin: 0;
 }
 
-.aa {
-    .qq {
-        font-size: 12px;
-    }
+body {
+    font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+    font-size: 14px;
 }
 </style>
