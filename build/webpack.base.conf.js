@@ -84,6 +84,10 @@ module.exports = {
       }
     ]
   },
+  // cdn接入
+  externals: {
+    jquery: "jQuery"
+  },
   plugins: [
     // rem 支持用
     new webpack.LoaderOptionsPlugin({

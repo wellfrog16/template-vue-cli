@@ -4,6 +4,7 @@ const config = {
 
 const log = s => !config.debug || console.log(s);
 
+// 货币格式化
 const currency = (value, currency, decimals) => {
     const digitsRE = /(\d{3})(?=\d)/g;
     value = parseFloat(value);
@@ -27,7 +28,55 @@ const currency = (value, currency, decimals) => {
     _float;
 };
 
+//
+const getType = obj => {
+    // tostring会返回对应不同的标签的构造函数
+    var toString = Object.prototype.toString;
+    var map = {
+        '[object Boolean]': 'boolean',
+        '[object Number]': 'number',
+        '[object String]': 'string',
+        '[object Function]': 'function',
+        '[object Array]': 'array',
+        '[object Date]': 'date',
+        '[object RegExp]': 'regExp',
+        '[object Undefined]': 'undefined',
+        '[object Null]': 'null',
+        '[object Object]': 'object'
+    };
+    if (obj instanceof Element) {
+        return 'element';
+    }
+    return map[toString.call(obj)];
+};
+
+// 深拷贝
+const deepClone = data => {
+    var type = getType(data);
+    var obj;
+    if (type === 'array') {
+        obj = [];
+    } else if (type === 'object') {
+        obj = {};
+    } else {
+        // 不再具有下一层次
+        return data;
+    }
+    if (type === 'array') {
+        for (const item of data) {
+            obj.push(deepClone(item));
+        }
+    } else if (type === 'object') {
+        for (var key in data) {
+            obj[key] = deepClone(data[key]);
+        }
+    }
+    return obj;
+};
+
 export default {
     log,
-    currency
+    currency,
+    getType,
+    deepClone
 };
