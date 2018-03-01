@@ -1,6 +1,17 @@
 # template-vue-cli
 
-> A Vue.js project
+> 自用vue模板
+
+* vue-li 2.8.2
+* vue 2.5.2
+* vue-router 3.0.1
+* vuex 3.0.1
+* eslint
+* rem
+* less
+* axios
+* mock
+
 
 ## Build Setup
 
