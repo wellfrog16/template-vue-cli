@@ -8,6 +8,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin')
 const portfinder = require('portfinder')
 const mock = require('../src/mock')
+//
+const StyleLintPlugin = require('stylelint-webpack-plugin');
 
 const devWebpackConfig = merge(baseWebpackConfig, {
   module: {
@@ -37,6 +39,9 @@ const devWebpackConfig = merge(baseWebpackConfig, {
     },
     before(app) { mock(app); }
   },
+  watchOptions: {
+    ignored: [/node_modules/, /dist/]
+  },
   plugins: [
     new webpack.DefinePlugin({
       'process.env': require('../config/dev.env')
@@ -50,6 +55,10 @@ const devWebpackConfig = merge(baseWebpackConfig, {
       template: 'index.html',
       inject: true
     }),
+    new StyleLintPlugin({
+      files: ['**/*.less', '**/*.s?(a|c)ss', '**/*.vue'],
+      syntax: 'less'
+    })
   ]
 })
 
