@@ -6,7 +6,7 @@
 * vue 2.5.2
 * vue-router 3.0.1
 * vuex 3.0.1
-* eslint
+* eslint, stylelint
 * rem
 * less
 * axios
