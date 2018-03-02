@@ -6,6 +6,7 @@
       "no-empty-source": null,
       "selector-class-pattern": "^[a-z]+[a-z\\d/-]*[a-z\\d]$",
       "selector-id-pattern": "^[a-zA-Z\\d]+$",
-      "max-nesting-depth": 3
+      "max-nesting-depth": 3,
+      "string-quotes": "single"
   }
 }
