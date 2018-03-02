@@ -1,6 +1,6 @@
 # template-vue-cli
 
-> A Vue.js project
+> 单页用模板
 
 ## Build Setup
 
