@@ -8,7 +8,11 @@
       "selector-id-pattern": "^[a-zA-Z\\d]+$",
       "max-nesting-depth": 3,
       "string-quotes": "single",
+<<<<<<< HEAD
       "function-url-quotes": "always",
       "selector-list-comma-newline-after": "never-multi-line"
+=======
+      "function-url-quotes": "always"
+>>>>>>> e574962f84263fac923ffeb71896a45f4e472453
   }
 }
